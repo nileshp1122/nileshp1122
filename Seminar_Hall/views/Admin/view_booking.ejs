@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin-add-booking</title>
+        <link rel="stylesheet" href="/css/admin/view_booking.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <img class="logo" src="/img/admin/hall-icon.png" alt="" />
+                <img class="logo_name" src="/img/admin/Seminar-name.png" alt="" />
+            </div>
+            <ul class="nav_list" id="nav_list">
+                <li>
+                    <a href="/dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/manage_venue">
+                        <i class="far fa-calendar-plus manage"></i>
+                        <span class="links_name">Manage Venue</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/add">
+                        <i class="far fa-edit add"></i>
+                        <span class="links_name">Add Booking</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/venueData">
+                        <i class="fas fa-table"></i>
+                        <span class="links_name">Venue Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/view_booking">
+                        <i class="far fa-list-alt view"></i>
+                        <span class="links_name">View Booking</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user_details">
+                        <i class="fas fa-user user"></i>
+                        <span class="links_name">User Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contactDetails">
+                        <i class="fas fa-address-book contact"></i>
+                        <span class="links_name">Contact Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        <i class="fas fa-sign-out-alt logout"></i>
+                        <span class="links_name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- home-section -->
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <label class="sidebarBtnIcon">
+                        <div class="spinner top"></div>
+                        <div class="spinner middle"></div>
+                        <div class="spinner bottom"></div>
+                    </label>
+                    <span class="dashboard">Dashboard</span>
+                    <span style="color: rgb(0, 179, 0); font-weight: bold;position: relative; left: 110%; font-size: 25px;">Booking Details</span>
+                </div>
+            </nav>
+
+            <form action="/search/<%= user.createdDate %>" method="POST">
+                <div class="searchBox">
+                    <input type="date" id="bookingDate1" name="createdDate1" required />
+                    <input type="date" id="bookingDate" name="createdDate" required />
+                    <button type="submit" id="searchBtn" >Search</button>
+                </div>
+            </form>
+
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="id">ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>PhoneNo.</th>
+                            <th>VenueType</th>
+                            <th>VenueName</th>
+                            <th>VenueLocation</th>
+                            <th>BookingDate</th>
+                            <th>EventDate</th>
+                            <th class="eventTime">EventTime</th>
+                            <th class="guest">Guests</th>
+                            <th class="action">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% user.forEach(function(user){ %>
+                        <tr>
+                            <td class="id"><%= user.id %></td>
+                            <td><%= user.fullName %></td>
+                            <td class="email"><%= user.email %></td>
+                            <td><%= user.phone %></td>
+                            <td><%= user.venue %></td>
+                            <td><%= user.venueName %></td>
+                            <td><%= user.venueLocation %></td>
+                            <td id="s"><%= new Date(user.createdDate).toLocaleDateString() %></td>
+                            <td id="s"><%= new Date(user.eventDate).toLocaleDateString() %></td>
+                            <td class="eventTime"><%= user.eventTime %></td>
+                            <td class="guest"><%= user.guests %></td>
+                            <td class="action">
+                                <a href="/edit/<%= user.id %>"><i class="material-icons edit1" style="font-size: 20px">edit</i></a>
+                                <a href="/delete/<%= user.id %>"><i class="material-icons delete1" style="font-size: 20px">delete</i></a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".sidebarBtnIcon");
+            sidebarBtn.onclick = function () {
+                sidebar.classList.toggle("active-nav");
+            };
+
+            window.addEventListener("change", () => {
+                let startDate = document.getElementById("bookingDate1").value;
+                let date = new Date(startDate);
+                let day = date.getDate();
+                let month = date.getMonth() +1;
+                let year = date.getFullYear();
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                let maxDate = year +"-" +month +"-" +day;
+                document.getElementById("bookingDate").setAttribute("min", maxDate);
+                // document.getElementById("bookingDate").setAttribute("value", maxDate);
+            });
+
+            window.addEventListener("change", () => {
+                let endDate = document.getElementById("bookingDate").value;
+                let date = new Date(endDate);
+                let day = date.getDate();
+                let month = date.getMonth() +1;
+                let year = date.getFullYear();
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                var minDate = year +"-" +month +"-" +day;
+                document.getElementById("bookingDate1").setAttribute("max", minDate);
+                // document.getElementById("bookingDate1").setAttribute("value", minDate);
+            });
+
+
+            // window.addEventListener("change", () => {
+            //     let startDate = document.getElementById("bookingDate1").value;
+            //     var todayDate = new Date(startDate);
+            //     var month = todayDate.getMonth() +1;
+            //     var year = todayDate.getUTCFullYear() - 0;
+            //     var tdate = todayDate.getDate();
+            //     if (month < 10) {
+            //         month = "0" + month;
+            //     }
+            //     if (tdate < 10) {
+            //         tdate = "0" + tdate;
+            //     }
+            //     var maxDate = year + "-" + month + "-" + tdate;
+            //     document.getElementById("bookingDate").setAttribute("min", maxDate);
+            //     document.getElementById("bookingDate").setAttribute("value", maxDate);
+            //     console.log(maxDate);
+            // });
+
+
+            // function search1() {
+
+            // }
+
+            // function fun(...date) {
+            //     for (let i in date) {
+            //         let date1 = date[i];
+            //         let d = new Date(date1);
+            //         document.getElementById("s").innerHTML = d.toLocaleDateString;
+            //     }
+            // }
+            // let date = [];
+            // for (i =0; i<2; i++) {
+            //     date = document.getElementById("val").value;
+            // }
+            // fun(date);
+
+            // var d = new Date();
+            // document.getElementById("da").innerHTML = d.toLocaleDateString();
+        </script>
+    </body>
+</html>

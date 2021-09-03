@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seminar-Hall</title>
+        <link rel="stylesheet" href="../css/venues.css" />
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <img src="../img/Seminar1.png" class="logo-image" alt="image" />
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="nav-list menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/city">Venues</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/about_Us">About us</a></li>
+                    <li><a href="/contact_Us">Contact us</a></li>
+                    <% if (login) { %>
+                        <li><a href="/logout" id="logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </nav>   
+            <div style="background-color: rgb(255, 255, 255); width: 100%; height: 58px;"></div>
+            <section class="first-section-title">
+                <div class="back-image">
+                    <img class="first-heading" src="../img/venues-image/venue-in-cities/venues-in-mumbai.png" alt="Venue in mumbai">
+                    <p class="first-para">Book seminar hall as per your choice</p>
+                </div>
+            </section>
+            <div class="back-btn">
+                <a href="/city">BACK TO CITY</a>
+            </div>         
+            <section class="second-section-venue">
+                <div class="venue-name-box mid-name">
+                    <h2>Book Venue</h2>
+                    <h4>Select a venue for hall booking</h4>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[0].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3 id="vName1"><%= user[0].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[0].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p id="vLocation1"><%= user[0].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">70 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>20-250 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn">BOOK REQUEST</button>
+                            <!-- <a href="#popupBox">REQUEST</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[1].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3><%= user[1].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[1].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p><%= user[1].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">90 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>10-300 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn2">BOOK REQUEST</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[2].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3><%= user[2].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[2].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p><%= user[2].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">80 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>10-270 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn3">BOOK REQUEST</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[3].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3><%= user[3].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[3].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p><%= user[3].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">75 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>20-230 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn4">BOOK REQUEST</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[4].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3><%= user[4].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[4].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p><%= user[4].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">80 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>10-250 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn5">BOOK REQUEST</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[5].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3><%= user[5].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[5].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p><%= user[5].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">70 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>10-250 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn6">BOOK REQUEST</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-card1">
+                    <img class="auditorium-image" src="<%= user[6].venueImage %>" alt="aura auditorium">
+                    <div class="hall-name">
+                        <h3><%= user[6].venueName %></h3>
+                        <div class="hall1">
+                            <img src="../img/venues-image/hall-icon.png" alt="hall">
+                            <h4><%= user[6].venueType %></h4>
+                        </div>
+                        <div class="location">
+                            <img src="../img/venues-image/location.png" alt="location">
+                            <p><%= user[6].venueLocation %></p>
+                        </div>
+                        <div class="star-rate">
+                            <img src="../img/venues-image/star.png" alt="star">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="food-menu">
+                        <img src="../img/venues-image/venue-rent-green.png" alt="food">
+                        <p>Standard Veg Menu</p>
+                    </div>
+                    <div class="quote-menu">
+                        <div class="icon-heart-cross">
+                            <img src="../img/venues-image/cross.png" alt="cross">
+                            <img src="../img/venues-image/like.png" alt="heart">
+                        </div>
+                        <p class="views">100 Views</p>
+                        <div class="guest-count">
+                            <img src="../img/venues-image/multiple-users-silhouette.png" alt="food">
+                            <p>20-300 Guests</p>
+                        </div>
+                        <div class="quote-btn">
+                            <button id="requestBtn7">BOOK REQUEST</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <br /><br /><br />
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-row-box">
+                        <div class="footer-col-box1">
+                            <img class="seminar-logo" src="../img/Seminar2.png" alt="image" />
+                            <p>Seminar hall is a online booking system,it book a seminar hall and auditorium,it provide a best venue in your city.</p>
+                            <div class="social-icon">
+                                <a href="#"><img src="../img/twitter.png" alt="image" /></a>
+                                <a href="#"><img src="../img/facebook.png" alt="image" /></a>
+                                <a href="#"><img src="../img/linkedin.png" alt="image" /></a>
+                                <a href="#"><img src="../img/insta.png" alt="image" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-col-box2">
+                            <h4>EXPLORE</h4>
+                            <div class="footer-list-box1">
+                                <ul>
+                                    <li><a href="mumbai-venue.html">Mumbai</a></li>
+                                    <li><a href="delhi-venue.html">Delhi</a></li>
+                                    <li><a href="goa-venue.html">Goa</a></li>
+                                    <li><a href="kolkata-venue.html">Kolkata</a></li>
+                                    <li><a href="banglore-venue.html">Banglore</a></li>
+                                    <li><a href="chennai-venue.html">Chennai</a></li>
+                                    <li><a href="hyderabad-venue.html">Hyderabad</a></li>
+                                    <li><a href="../city.html">All Cities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-col-box3">
+                            <h4>QUICK LINKS</h4>
+                            <div class="footer-list-box2">
+                                <ul>
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="../city.html">Venues</a></li>
+                                    <li><a href="../about-us.html">About us</a></li>
+                                    <li><a href="../contact-us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end">
+                    <p>copyright &copy; 2021. All rights Reserve</p>
+                </div>
+            </footer>
+
+            <!-- popup box -->
+            <div class="popup" id="popupBox">
+                <div class="popup-inner" id="popupInner">
+                    <div class="popup-photo">
+                        <img class="pupup-icon" src="../img/venues-image/Seminar-popup.png" alt="image" />
+                        <img class="popup-image" src="../img/venues-image/star1.png" alt="image" />
+                        <div class="black2"></div>
+                        <span>book your venue</span>
+                        <p>Fill this form and book yor venue before fill this form login first</p>
+                    </div>
+                    <a class="popup-close" id="popup-close"> &times; </a>
+                    
+                    <div class="popup-form">
+                        <div class="step-row">
+                            <div id="progress"></div>
+                            <div class="step-col"><small>Step 1</small></div>
+                            <div class="step-col"><small>Step 2</small></div>
+                            <div class="step-col"><small>Step 3</small></div>
+                        </div>
+
+                        <form action="/Form" method="POST">
+                            <section id="form1">
+                                <div class="input-box">
+                                    <div class="label-input1">
+                                        <label>Venue Type</label>
+                                        <input list="venue" name="venue" id="venue1" value="Seminar Hall" autocomplete="off" >
+                                        <datalist id="venue">
+                                            <option value="Seminar Hall">Seminar Hall</option>
+                                        </datalist>
+                                    </div>
+                                    <div class="label-input2">
+                                        <label>Venue Name</label>
+                                        <input type="text" name="venueName" id="venueName1" autocomplete="off">
+                                    </div>
+                                    <div class="label-input3">
+                                        <label>Venue Location</label>
+                                        <input type="text" name="venueLocation" id="venueLocation1" autocomplete="off">
+                                    </div>
+                                    <div class="label-input4">
+                                        <label>No. of guests (min 20)</label>
+                                        <input type="text" name="guests" id="guests1" autocomplete="off">
+                                    </div>       
+                                </div>
+                                <div class="btn-box">
+                                    <button type="button" id="next1">Next</button>
+                                </div>
+                            </section>
+
+                            <section id="form2">
+                                <div class="input-box2">
+                                    <div class="label-input2">
+                                        <label>Event Date</label>
+                                        <input type="date" name="eventDate" id="eventDate1" >
+                                    </div>
+                                    <div class="label-input3">
+                                        <label>Event Time</label>
+                                        <input type="time" name="eventTime" id="eventTime1" >
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <button type="button" id="back1">back</button>
+                                    <button type="button" id="next2">Next</button>
+                                </div>
+                            </section>
+
+                            <section id="form3">
+                                <div class="input-box">
+                                    <div class="label-input1">
+                                        <label>Full Name</label>
+                                        <input type="text" name="fullName" id="fullName1" autocomplete="off" required>
+                                    </div>
+                                    <div class="label-input2">
+                                        <label>Email</label>
+                                        <input type="email" name="email" id="email1" autocomplete="off" required>
+                                    </div>
+                                    <div class="label-input3">
+                                        <label>Phone No.</label>
+                                        <input type="text" name="phone" id="mobile1" autocomplete="off" required>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <button type="button" id="back2">Back</button>
+                                    <!-- <button type="button" id="exit1">Exit</button> -->
+                                    <button type="submit" class="submitBtn">submit</button>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let requestBtn = document.getElementById("requestBtn");
+            let popupForm = document.getElementById("popupBox");
+            // let popupInner = document.getElementsByClassName("popup-inner");
+            let inner = document.getElementById("popupInner");
+            let closeBtn = document.getElementById("popup-close");
+            requestBtn.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[0].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[0].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+            closeBtn.onclick = function() {
+                popupForm.style = "display:flex;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.add("popup-inner");
+                setTimeout(function(){ popupForm.style = "opacity: 0;"; }, 150);
+                setTimeout(function(){ inner.classList.remove("popup-inner"); }, 150);
+                setTimeout(function(){ inner.classList.add("popup-inner"); }, 150);
+            }
+        
+            // Form code
+            var form1 = document.getElementById("form1");
+            var form2 = document.getElementById("form2");
+            var form3 = document.getElementById("form3");
+
+            var next1 = document.getElementById("next1");
+            var next2 = document.getElementById("next2");
+            var back1 = document.getElementById("back1");
+            var back2 = document.getElementById("back2");
+
+            var progress = document.getElementById("progress");
+
+            next1.onclick = function() {
+                form1.style.left = "-200px";
+                form2.style.left = "210px";
+                progress.style.width = "284px";   
+            }
+
+            // window.addEventListener("change", () => {
+            //     var guest = document.getElementById("guests1").value;
+            //     alert(guest);
+            //     if (guest == "") {
+            //         document.getElementById("guests1").setCustomValidity("Entering an number is necessary !!!");
+            //     }
+            // });
+
+            back1.onclick = function() {
+                form1.style.left = "210px";
+                form2.style.left = "610px";
+                progress.style.width = "142px";
+            }
+            next2.onclick = function() {
+                form2.style.left = "-200px";
+                form3.style.left = "210px";
+                progress.style.width = "426px";
+            }
+            back2.onclick = function() {
+                form2.style.left = "210px";
+                form3.style.left = "610px";
+                progress.style.width = "284px";
+            }
+
+            let requestBtn2 = document.getElementById("requestBtn2");
+            requestBtn2.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[1].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[1].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+            let requestBtn3 = document.getElementById("requestBtn3");
+            requestBtn3.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[2].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[2].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+            let requestBtn4 = document.getElementById("requestBtn4");
+            requestBtn4.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[3].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[3].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+            let requestBtn5 = document.getElementById("requestBtn5");
+            requestBtn5.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[4].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[4].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+            let requestBtn6 = document.getElementById("requestBtn6");
+            requestBtn6.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[5].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[5].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+            let requestBtn7 = document.getElementById("requestBtn7");
+            requestBtn7.onclick = function() {
+                popupForm.style = "display:flex; visibility:visible; opacity: 1;";
+                inner.classList.toggle("popupInner1");
+                inner.classList.remove("popup-inner");
+
+                document.getElementById("venueName1").value = `${'<%= user[6].venueName %>'}`;
+                document.getElementById("venueLocation1").value = `${'<%= user[6].venueLocation %>'}`;
+
+                document.getElementById("guests1").value = ""; 
+                document.getElementById("eventDate1").value = "";
+                document.getElementById("eventTime1").value = "  :  :  ";
+                document.getElementById("fullName1").value = "";
+                document.getElementById("email1").value = "";
+                document.getElementById("mobile1").value = "";
+            }
+
+            let date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth() +1;
+            let year = date.getFullYear();
+            if (month < 10) {
+                month = "0" + month;
+            }
+            let eventDate = year +"-" +month +"-" +day;
+            document.getElementById("eventDate1").setAttribute("min", eventDate);
+
+        </script>
+    </body>
+</html>

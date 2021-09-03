@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seminar-login</title>
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <img src="img/Seminar1.png" class="logo-image" alt="image" />
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="nav-list menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="city.html">Venues</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+            </nav> 
+            <div style="background-color: rgb(255, 255, 255); width: 100%; height: 58px;"></div>
+            <section class="login-section">
+                <img src="img/corner.png" alt="design" style="height: 130px; left: 17%; top: 7%; position: relative;">
+                <div class="login-box">
+                    <div class="login-form">
+                        <h1>Sign in to Account</h1>
+                        <div class="social-image-box">
+                            <img src="img/facebook1.png" alt="facebook1">
+                            <img src="img/search.png" alt="search">
+                        </div>
+                        <p>or use your email account</p>
+                        <div class="input-field">
+                            <img src="img/black-back-closed-envelope-shape.png" alt="black-back-closed-envelope-shape">
+                            <input type="email" placeholder="Email" id="username">
+                        </div>
+                        <div class="input-field">
+                            <img src="img/lock.png" alt="lock">
+                            <input type="password" placeholder="Password" id="password">
+                        </div>
+                        <div class="check-forget">
+                            <input type="checkbox">&nbsp; Remember me
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <button class="btn1" onclick="showAdmin()">SIGN IN</button>
+                    </div>
+                    <div class="jump-signup-form">
+                        <h1>Hello, Friend!</h1>
+                        <p>Fill up personal information and start booking</p>
+                        <button class="btn2">SIGN UP</button>
+                    </div>
+                </div>
+                <img src="img/corner2-rotate.png" alt="design" style="height: 130px; position: relative; float: right; top: 72.5%; right: 17%;">
+            </section>
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-row-box">
+                        <div class="footer-col-box1">
+                            <img class="seminar-logo" src="img/Seminar2.png" alt="image" />
+                            <p>Seminar hall is a online booking system,it book a seminar hall and auditorium,it provide a best venue in your city.</p>
+                            <div class="social-icon">
+                                <a href="#"><img src="img/twitter.png" alt="image" /></a>
+                                <a href="#"><img src="img/facebook.png" alt="image" /></a>
+                                <a href="#"><img src="img/linkedin.png" alt="image" /></a>
+                                <a href="#"><img src="img/insta.png" alt="image" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-col-box2">
+                            <h4>EXPLORE</h4>
+                            <div class="footer-list-box1">
+                                <ul>
+                                    <li><a href="Venues/mumbai-venue.html">Mumbai</a></li>
+                                    <li><a href="Venues/delhi-venue.html">Delhi</a></li>
+                                    <li><a href="Venues/goa-venue.html">Goa</a></li>
+                                    <li><a href="Venues/kolkata-venue.html">Kolkata</a></li>
+                                    <li><a href="Venues/banglore-venue.html">Banglore</a></li>
+                                    <li><a href="Venues/chennai-venue.html">Chennai</a></li>
+                                    <li><a href="Venues/hyderabad-venue.html">Hyderabad</a></li>
+                                    <li><a href="city.html">All Cities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-col-box3">
+                            <h4>QUICK LINKS</h4>
+                            <div class="footer-list-box2">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="city.html">Venues</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a href="contact-us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end">
+                    <p>copyright &copy; 2021. All rights Reserve</p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            function showAdmin() {
+                var username, password;
+                username = document.getElementById("username").value;
+                password = document.getElementById("password").value;
+                if (username == "nilesh123" && password == 1122) {
+                    location.replace("Admin/dashboard.html");
+                    // alert("succss");
+                } else {
+                    location.replace("login.html");
+                    // alert("fail");
+                }
+            }
+        </script>
+    </body>
+</html>

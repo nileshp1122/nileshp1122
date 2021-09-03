@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin-dashboard</title>
+        <link rel="stylesheet" href="/css/admin/dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <img class="logo" src="/img/admin/hall-icon.png" alt="">
+                <img class="logo_name" src="/img/admin/Seminar-name.png" alt="">
+            </div>
+            <ul class="nav_list" id="nav_list">
+                <li>
+                    <a href="/dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                </li>                 
+                <li>
+                    <a href="/manage_venue">
+                        <i class="far fa-calendar-plus manage"></i>
+                        <span class="links_name">Manage Venue</span>
+                    </a>
+                </li>          
+                <li>
+                    <a href="/add">
+                        <i class="far fa-edit add"></i>
+                        <span class="links_name">Add Booking</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="/venueData">
+                        <i class="fas fa-table"></i>
+                        <span class="links_name">Venue Data</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="/view_booking">
+                        <i class="far fa-list-alt view"></i>
+                        <span class="links_name">View Booking</span>
+                    </a>
+                </li>          
+                <li>
+                    <a href="/user_details">
+                        <i class="fas fa-user user"></i>
+                        <span class="links_name">User Details</span>
+                    </a>
+                </li>         
+                <li>
+                    <a href="/contactDetails">
+                        <i class="fas fa-address-book contact"></i>
+                        <span class="links_name">Contact Details</span>
+                    </a>
+                </li>         
+                <li>
+                    <a href="/login">
+                        <i class="fas fa-sign-out-alt logout"></i>
+                        <span class="links_name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- home-section -->
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <label class="sidebarBtnIcon">
+                        <div class="spinner top"></div>
+                        <div class="spinner middle"></div>
+                        <div class="spinner bottom"></div>
+                    </label>
+                    <span class="dashboard">Dashboard</span>
+                    <span style="color: rgb(0, 179, 0); font-weight: bold;position: relative; left: 123%; font-size: 25px;">Seminar Hall</span>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="data">
+                    <div class="data1">
+                        <a href="/view_booking">
+                            <span class="total">View Booking Details</span>
+                            <hr style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="data2">
+                        <a href="/user_details">
+                            <span class="total">User Details</span>
+                            <hr style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="data3">
+                        <a href="/contactDetails">
+                            <span class="total">Contact Us Details</span>
+                            <hr style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+                <div class="data">
+                    <div class="data1">
+                        <a href="/add">
+                            <span class="total">Add Booking</span>
+                            <hr style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="data2">
+                        <a href="/venueData">
+                            <span class="total">Venue Data</span>
+                            <hr style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="data3">
+                        <a href="/manage_venue">
+                            <span class="total">Add Venue</span>
+                            <hr style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>      
+        </section>
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".sidebarBtnIcon");
+            sidebarBtn.onclick = function() {
+                sidebar.classList.toggle("active-nav");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin-update-booking</title>
+        <link rel="stylesheet" href="/css/admin/update_booking.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <img class="logo" src="/img/admin/hall-icon.png" alt="">
+                <img class="logo_name" src="/img/admin/Seminar-name.png" alt="">
+            </div>
+            <ul class="nav_list" id="nav_list">
+                <li>
+                    <a href="/dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                </li>                 
+                <li>
+                    <a href="/manage_venue">
+                        <i class="far fa-calendar-plus manage"></i>
+                        <span class="links_name">Manage Venue</span>
+                    </a>
+                </li>          
+                <li>
+                    <a href="/add">
+                        <i class="far fa-edit add"></i>
+                        <span class="links_name">Add Booking</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="/venueData">
+                        <i class="fas fa-table"></i>
+                        <span class="links_name">Venue Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/view_booking">
+                        <i class="far fa-list-alt view"></i>
+                        <span class="links_name">View Booking</span>
+                    </a>
+                </li>          
+                <li>
+                    <a href="/user_details">
+                        <i class="fas fa-user user"></i>
+                        <span class="links_name">Cancle Booking</span>
+                    </a>
+                </li>         
+                <li>
+                    <a href="/contactDetails">
+                        <i class="fas fa-address-book contact"></i>
+                        <span class="links_name">Update Booking</span>
+                    </a>
+                </li>         
+                <li>
+                    <a href="/login">
+                        <i class="fas fa-sign-out-alt logout"></i>
+                        <span class="links_name">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- home-section -->
+        <section class="home-section">
+            <nav>
+                <div class="sidebar-button">
+                    <label class="sidebarBtnIcon">
+                        <div class="spinner top"></div>
+                        <div class="spinner middle"></div>
+                        <div class="spinner bottom"></div>
+                    </label>
+                    <span class="dashboard">Dashboard</span>
+                </div>
+            </nav>
+            <h1>Update Booking</h1>
+            <form action="/save_edit" method="post">
+                <div class="form-box">
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Booking ID</label>
+                        </div>
+                        <div class="col2">
+                            <input type="text" name="id" value="<%= user.id%>">
+                        </div>
+                        <!-- <div class="col3">
+                            <a class="btn2" href="">edit</a>
+                        </div> -->
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Full Name</label>
+                        </div>
+                        <div class="col2">
+                            <input type="text" name="fullName" value="<%= user.fullName%>">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Email</label>
+                        </div>
+                        <div class="col2">
+                            <input type="email" name="email" value="<%= user.email%>">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Phone No.</label>
+                        </div>
+                        <div class="col2">
+                            <input type="text" name="phone" value="<%= user.phone%>">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Venue Type</label>
+                        </div>
+                        <div class="col2">
+                            <input type="text" name="venue" value="<%= user.venue%>">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Event Date</label>
+                        </div>
+                        <div class="col2">
+                            <input type="text" name="eventDate" id="eventDate" value="<%= new Date(user.eventDate) %>">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">Event Time</label>
+                        </div>
+                        <div class="col2">
+                            <input type="time" name="eventTime" value="<%= user.eventTime%>">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col1">
+                            <label for="">No. of Guests</label>
+                        </div>
+                        <div class="col2">
+                            <input type="text" name="guests" value="<%= user.guests%>">
+                        </div>
+                    </div>
+                    <!-- <a class="btn1" href="#">update</a> -->
+                    <button type="submit" class="btn1">Save</button>
+                </div>
+            </form>      
+        </section>
+        <script>
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".sidebarBtnIcon");
+            sidebarBtn.onclick = function() {
+                sidebar.classList.toggle("active-nav");
+            }
+
+            let d = document.getElementById("eventDate").value;
+            let date = new Date(d);
+            let day = date.getDate();
+            let month = date.getMonth() +1;
+            let year = date.getFullYear();
+            document.getElementById("eventDate").value = year +"/" +month +"/" +day;
+        </script>
+    </body>
+</html>

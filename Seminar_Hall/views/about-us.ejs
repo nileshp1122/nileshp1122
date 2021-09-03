@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seminar-about-us</title>
+        <link rel="stylesheet" href="css/about.css" />
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <img src="img/Seminar1.png" class="logo-image" alt="image" />
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="nav-list menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/city">Venues</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/about_Us">About us</a></li>
+                    <li><a href="/contact_Us">Contact us</a></li>
+                    <% if (login) { %>
+                        <li><a href="/logout" id="logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </nav> 
+            <div style="background-color: rgb(255, 255, 255); width: 100%; height: 58px;"></div>
+            <div class="about-image-box">
+                <img src="img/seminar-about-image2.jpg" class="about-image" alt="image">
+            </div>
+            <div class="about-para">
+                <h2>ABOUT US</h2>
+                <p>We are an information based place for venues offering a wide array of choices based on a specific need, be it conferences, meetings, brand launches, social get together and events. Conference Venue is well equipped to serve corporates, individuals as well as entities engaged in organising events. We facilitate a process of connecting relevant partners with a prospect searching for a right venue. Our mission is to serve as an enabler to a customer for finding the right venue with a selection of attributes at the click of mouse.</p><br>
+                <p>Our website takes the client through a set of well-orchestrated attributes to narrow their search to a set of select venues to choose from. These attributes may vary from the category of venue, to a number of attendees, type of setting to a specific requirement filtered down to proximity of venue to various other amenities.</p><br>
+                <!-- <p>Each partner managing the venue listed on our website has been extensively audited to the best available information and ability for authenticity of information, we have earned credibility for maintaining high service standards and believe in providing a memorable experience to cherish.</p><br>
+                <p>We have established ourselves to become an unique platform that helps in taking informed decision, with your priorities in mind, right from filtering to finalising a venue.</p> -->
+            </div>
+            <br><br><br>
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-row-box">
+                        <div class="footer-col-box1">
+                            <img class="seminar-logo" src="img/Seminar2.png" alt="image" />
+                            <p>Seminar hall is a online booking system,it book a seminar hall and auditorium,it provide a best venue in your city.</p>
+                            <div class="social-icon">
+                                <a href="#"><img src="img/twitter.png" alt="image" /></a>
+                                <a href="#"><img src="img/facebook.png" alt="image" /></a>
+                                <a href="#"><img src="img/linkedin.png" alt="image" /></a>
+                                <a href="#"><img src="img/insta.png" alt="image" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-col-box2">
+                            <h4>EXPLORE</h4>
+                            <div class="footer-list-box1">
+                                <ul>
+                                    <li><a href="Venues/mumbai-venue.html">Mumbai</a></li>
+                                    <li><a href="Venues/delhi-venue.html">Delhi</a></li>
+                                    <li><a href="Venues/goa-venue.html">Goa</a></li>
+                                    <li><a href="Venues/kolkata-venue.html">Kolkata</a></li>
+                                    <li><a href="Venues/banglore-venue.html">Banglore</a></li>
+                                    <li><a href="Venues/chennai-venue.html">Chennai</a></li>
+                                    <li><a href="Venues/hyderabad-venue.html">Hyderabad</a></li>
+                                    <li><a href="city.html">All Cities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-col-box3">
+                            <h4>QUICK LINKS</h4>
+                            <div class="footer-list-box2">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="city.html">Venues</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a href="contact-us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end">
+                    <p>copyright &copy; 2021. All rights Reserve</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

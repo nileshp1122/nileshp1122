@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url("../../img/admin/nature4.jpg");
+    background-size: 100% 100%;
+    transition: all 0.5s ease;
+}
+.sidebar.active-nav {
+    width: 240px;
+}
+.sidebar .logo-details {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    gap: 20px;
+}
+.sidebar .logo-details .logo {
+    min-width: 32px;
+    height: 27px;
+}
+.sidebar .logo-details .logo_name {
+    height: 23px;
+    opacity: 0;
+}
+.sidebar.active-nav .logo-details .logo_name {
+    opacity: 1;
+}
+.sidebar .nav_list {
+    margin-top: 16px;
+}
+.sidebar .nav_list li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    list-style: none;
+    line-height: 50px;
+    border-radius: 12px;
+}
+.sidebar .nav_list li a {
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+.sidebar .nav_list li a:hover {
+    color: #11101d;
+    background: #ffffff;
+}
+.sidebar .nav_list li i {
+    min-width: 70px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 12px;
+}
+.sidebar .nav_list li .manage {
+    font-size: 19px;
+}
+.sidebar .nav_list li .add {
+    font-size: 16px;
+    font-weight: bold;
+}
+.sidebar .nav_list li .view {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: -0.4px;
+}
+.sidebar .nav_list li .user {
+    font-size: 18px;
+    margin-left: -1.4px;
+}
+.sidebar .nav_list li .contact {
+    font-size: 18px;
+    margin-left: -1.4px;
+}
+.sidebar .nav_list li .logout {
+    margin-left: -0.4px;
+}
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active-nav .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+/*--- home-section -----*/
+.home-section {
+    background-color: #f3d277;
+    /* background: #f8f8f8; */
+    background-size: 100% 100%;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 70px);
+    left: 70px;
+    transition: all 0.5s ease;
+}
+.sidebar.active-nav ~ .home-section {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+.home-section nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 42;
+    top: 0;
+    height: 46px;
+    background: #ffffff;
+    padding: 0 13px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    /* border-bottom: 3px solid red; */
+}
+.home-section nav .sidebar-button {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 500px;
+    gap: 11px;
+}
+.sidebarBtnIcon {
+    height: 17px;
+    width: 20px;
+    position: relative;
+    z-index: 22;
+    top: 1px;
+    cursor: pointer;
+}
+.spinner {
+    height: 3px;
+    background-color: #000;
+}
+.spinner.middle, .spinner.bottom {
+    margin-top: 3px;
+    transition: all 0.3s;
+}
+.sidebar.active-nav ~ .home-section .spinner.middle {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    width: 15px;
+}
+.sidebar.active-nav ~ .home-section .spinner.bottom {
+    position: absolute;
+    width: 10px;
+    right: 0;
+    top: 9px;
+}
+.back {
+    width: 100%;
+    height: 100%;
+}
+/*--- table-section -----*/
+h1 {
+    text-align: center;
+    margin-top: 1.2%;
+}
+.table-box {
+    background-color: #ffffff;
+    padding: 8px;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+}
+tr, th, td {
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    padding: 10px 5px;
+}
+table th {
+    background-color: #ec8321;
+    color: white;
+    font-size: 16px;
+}
+tr, td {
+    font-size: 14px;
+    min-width: 90px;
+    text-align: center;
+}
+tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+.id {
+    min-width: 40px;
+}
+.action {
+    width: 70px;
+}
+.guest {
+    min-width: 65px;
+}
+.email {
+    text-align: left;
+}
+.material-icons {
+    margin: 7px 4px 7px 4px;
+}
+.edit1 {
+    color: #FFC107;
+}
+.delete1 {
+    color: #E34724;
+}
+.eventTime {
+    min-width: 65px;
+}
+
+/* ----- Date ----- */
+::-webkit-datetime-edit {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+::-webkit-datetime-edit-fields-wrapper {
+    /* background: rgb(224, 223, 223); */
+}
+::-webkit-datetime-edit-text {
+    color: red;
+}
+::-webkit-datetime-edit-month-field {
+    color: blue;
+}
+::-webkit-datetime-edit-day-field {
+    color: green;
+}
+::-webkit-datetime-edit-year-field {
+    color: purple;
+}
+::-webkit-calendar-picker-indicator {
+    width: 30px;
+    padding-left: 250px;
+    height: 25px;
+    margin-left: -200px;
+    
+    filter: invert(60%) sepia(100%) saturate(1854%) hue-rotate(3deg) brightness(107%) contrast(106%);
+    /* filter: invert(48%) sepia(30%) saturate(0%) hue-rotate(203deg) brightness(90%) contrast(95%); */
+}
+
+input[type="date" i] {
+    width: 250px;
+    /* max-width: 22%; */
+}
+
+.searchBox {
+    border: 2px solid #b6b6b6;
+    padding: 7px 2.5% 7px 7px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+}
+#bookingDate, #bookingDate1 {
+    outline: none;
+}
+#searchBtn {
+    background-color: rgba(157, 23, 197, 0.925);
+    padding: 2px 11px 2px 11px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+}
+

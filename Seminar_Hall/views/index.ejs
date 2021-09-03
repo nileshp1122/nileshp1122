@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seminar-Hall</title>
+        <link rel="stylesheet" href="css/home1.css" />
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <img src="img/Seminar1.png" class="logo-image" alt="image" />
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="nav-list menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/city">Venues</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/about_Us">About us</a></li>
+                    <li><a href="/contact_Us">Contact us</a></li>
+                    <% if (login) { %>
+                        <li><a href="/logout" id="logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </nav>
+            <div style="background-color: rgb(255, 255, 255); width: 100%; height: 58px"></div>
+            <section class="first-section">
+                <div class="back-image">
+                    <h1 class="first-heading">Book Your Venue</h1>
+                    <p class="first-para">Book seminar hall as per your choice</p>
+                    <div class="btn-div">
+                        <a href="city.html" class="btn1">BOOK VENUE</a>
+                        <a href="about-us.html" class="btn2">KNOW MORE</a>
+                        <!-- <button class="btn2">KNOW MORE</button> -->
+                    </div>
+                    <div class="search-div">
+                        <input list="city" class="input-box" id="searchCity" placeholder="Search your venue by venue name or city name" />
+                        <datalist id="city">
+                            <option value="Mumbai"></option>
+                            <option value="Delhi"></option>
+                            <option value="Kolkata"></option>
+                            <option value="Banglore"></option>
+                            <option value="Hyderabad"></option>
+                            <option value="Chennai"></option>
+                            <option value="Goa"></option>
+                            <option value="Ahmedabad"></option>
+                            <option value="Agra"></option>
+                            <option value="Noida"></option>
+                            <option value="Mysore"></option>
+                            <option value="Shimla"></option>
+                            <option value="Pune"></option>
+                            <option value="Indore"></option>
+                            <option value="Bhopal"></option>
+                            <option value="Surat"></option>
+                        </datalist>
+                        <button class="btn3" onclick="search()">FIND VENUE</button>
+                    </div>
+                </div>
+            </section>
+            <br />
+            <div class="line-image" style="text-align: center; height: 110px">
+                <img src="img/line/line-design00.png" alt="image" style="width: 90%" />
+            </div>
+            <section class="second-section-image">
+                <div class="popular-name-box mid-name">
+                    <h2>Popular Cities</h2>
+                    <h4>Select the venue from best location arround the India</h4>
+                </div>
+                <div class="image-gallary-box">
+                    <div class="image-box1">
+                        <a href="/mumbai-venue" class="mumbai-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Mumbai</span></div>
+                        </a>
+                        <a href="/goa-venue" class="goa-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Goa</span></div>
+                        </a>
+                    </div>
+                    <div class="image-box2">
+                        <a href="/delhi-venue" class="delhi-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Delhi</span></div>
+                        </a>
+                        <a href="/banglore-venue" class="banglore-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Banglore</span></div>
+                        </a>
+                        <a href="/kolkata-venue" class="kolkata-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Kolkata</span></div>
+                        </a>
+                    </div>
+                    <div class="image-box3">
+                        <a href="/chennai-venue" class="chennai-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Chennai</span></div>
+                        </a>
+                        <a href="/hyderabad-venue" class="hyderabad-popular-link">
+                            <div class="popular-city-name"><span class="popular-city-name">Hyderabad</span></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="line-image" style="text-align: center">
+                <img src="img/line/line-design00.png" alt="image" style="width: 90%" />
+            </div>
+            <br />
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-row-box">
+                        <div class="footer-col-box1">
+                            <img class="seminar-logo" src="img/Seminar2.png" alt="image" />
+                            <p>Seminar hall is a online booking system,it book a seminar hall and auditorium,it provide a best venue in your city.</p>
+                            <div class="social-icon">
+                                <a href="#"><img src="img/twitter.png" alt="image" /></a>
+                                <a href="#"><img src="img/facebook.png" alt="image" /></a>
+                                <a href="#"><img src="img/linkedin.png" alt="image" /></a>
+                                <a href="#"><img src="img/insta.png" alt="image" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-col-box2">
+                            <h4>EXPLORE</h4>
+                            <div class="footer-list-box1">
+                                <ul>
+                                    <li><a href="/mumbai-venue">Mumbai</a></li>
+                                    <li><a href="/delhi-venue">Delhi</a></li>
+                                    <li><a href="/goa-venue">Goa</a></li>
+                                    <li><a href="/kolkata-venue">Kolkata</a></li>
+                                    <li><a href="/banglore-venue">Banglore</a></li>
+                                    <li><a href="/chennai-venue">Chennai</a></li>
+                                    <li><a href="/hyderabad-venue">Hyderabad</a></li>
+                                    <li><a href="/city">All Cities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-col-box3">
+                            <h4>QUICK LINKS</h4>
+                            <div class="footer-list-box2">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/city">Venues</a></li>
+                                    <li><a href="/about_Us">About us</a></li>
+                                    <li><a href="/contact_Us">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end">
+                    <p>copyright &copy; 2021. All rights Reserve</p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            function search() {
+                let searchCity = document.getElementById("searchCity").value;
+                let mumbai = `${'<%= user[0].cityName %>'}`;
+                let delhi = `${'<%= user[1].cityName %>'}`;
+                let kolkata = `${'<%= user[2].cityName %>'}`;
+                let banglore = `${'<%= user[3].cityName %>'}`;
+                let hyderabad = `${'<%= user[4].cityName %>'}`;
+                let chennai = `${'<%= user[5].cityName %>'}`;
+                let goa = `${'<%= user[6].cityName %>'}`;
+                let ahmedabad = `${'<%= user[7].cityName %>'}`;
+                if (searchCity == mumbai) {
+                    window.location.replace("/mumbai-venue");
+                }
+                else if (searchCity == delhi) {
+                    window.location.replace("/delhi-venue");
+                }
+                else if (searchCity == kolkata) {
+                    window.location.replace("/kolkata-venue");
+                }
+                else if (searchCity == banglore) {
+                    window.location.replace("/banglore-venue");
+                }
+                else if (searchCity == hyderabad) {
+                    window.location.replace("/goa-venue");
+                }
+                else if (searchCity == chennai) {
+                    window.location.replace("/hyderabad-venue");
+                }
+                else if (searchCity == goa) {
+                    window.location.replace("/goa-venue");
+                }
+                else if (searchCity == ahmedabad) {
+                    window.location.replace("/ahmedabad-venue");
+                }
+            }
+        </script>
+    </body>
+</html>

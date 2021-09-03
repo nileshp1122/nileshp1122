@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seminar-city-gallary</title>
+        <link rel="stylesheet" href="css/city.css" />
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <img src="img/Seminar1.png" class="logo-image" alt="image" />
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn" onclick="toggleBtn()"><span class="nav-icon"></span></label>
+                <ul class="nav-list menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/city">Venues</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/about_Us">About us</a></li>
+                    <li><a href="/contact_Us">Contact us</a></li>
+                    <% if (login) { %>
+                        <li><a href="/logout" id="logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </nav>   
+            <div style="background-color: rgb(255, 255, 255); width: 100%; height: 58px;"></div>
+            <section class="city-gallary">
+                <div class="city-gallary-box">
+                    <div class="city-name-box mid-name">
+                        <h2>Cities for Venue</h2>
+                        <h4>Select the city for venue</h4>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/mumbai2.jpeg" alt="Mumbai" />
+                                <div class="ovarlay"><a class="ovarlay" href="/mumbai-venue"></a></div>
+                                <span class="city-name">Mumbai</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/delhi2.jpg" alt="Delhi" />
+                                <div class="ovarlay"><a class="ovarlay" href="/delhi-venue"></a></div>
+                                <span class="city-name">Delhi</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/kolkata1.jpg" alt="Kolkata" />
+                                <div class="ovarlay"><a class="ovarlay" href="/kolkata-venue"></a></div>
+                                <span class="city-name">Kolkata</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/banglore1.jpg" alt="banglore" />
+                                <div class="ovarlay"><a class="ovarlay" href="/banglore-venue"></a></div>
+                                <span class="city-name">Banglore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/hyderabad1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="/hyderabad-venue"></a></div>
+                                <span class="city-name">Hyderabad</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/chennai1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="/chennai-venue"></a></div>
+                                <span class="city-name">Chennai</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/goa1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="/goa-venue"></a></div>
+                                <span class="city-name">Goa</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/ahmedabad1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="/ahmedabad-venue"></a></div>
+                                <span class="city-name">Ahmedabad</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/agra1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/agra-venue.html"></a></div>
+                                <span class="city-name">Agra</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/noida1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/noida-venue.html"></a></div>
+                                <span class="city-name">Noida</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/mysore1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/mysore-venue.html"></a></div>
+                                <span class="city-name">Mysore</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/shimla1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/shimla-venue.html"></a></div>
+                                <span class="city-name">Shimla</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/pune1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/pune-venue.html"></a></div>
+                                <span class="city-name">Pune</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/indore1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/indore-venue.html"></a></div>
+                                <span class="city-name">Indore</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/bhopal1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/bhopal-venue.html"></a></div>
+                                <span class="city-name">Bhopal</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/surat1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/surat-venue.html"></a></div>
+                                <span class="city-name">Surat</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/nasik1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/nasik-venue.html"></a></div>
+                                <span class="city-name">Nasik</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/bhubaneshwar1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/bhubaneshwar-venue.html"></a></div>
+                                <span class="city-name">Bhubaneshwar</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/coimbatore2.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/coimbatore-venue.html"></a></div>
+                                <span class="city-name">Coimbatore</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/jaipur2.webp" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/jaipur-venue.html"></a></div>
+                                <span class="city-name">Jaipur</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/nagpur1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/nagpur-venue.html"></a></div>
+                                <span class="city-name">Nagpur</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/aurangabad1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/aurangabad-venue.html"></a></div>
+                                <span class="city-name">Aurangabad</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/ujjain1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/ujjain-venue.html"></a></div>
+                                <span class="city-name">Ujjain</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/trivandrum1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/trivandrum-venue.html"></a></div>
+                                <span class="city-name">Trivandrum</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/gurgaon1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/gurgaon-venue.html"></a></div>
+                                <span class="city-name">Gurgaon</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/guwahati1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/guwahati-venue.html"></a></div>
+                                <span class="city-name">Guwahati</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/visakhapatnam1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/visakhapatnam-venue.html"></a></div>
+                                <span class="city-name">Visakhapatnam</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/vadodara1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/vadodara-venue.html"></a></div>
+                                <span class="city-name">Vadodara</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/jodhpur1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/jodhpur-venue.html"></a></div>
+                                <span class="city-name">Jodhpur</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/kochi1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/kochi-venue.html"></a></div>
+                                <span class="city-name">Kochi</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/lucknow1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/lucknow-venue.html"></a></div>
+                                <span class="city-name">Lucknow</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/madurai1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/madurai-venue.html"></a></div>
+                                <span class="city-name">Madurai</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/manali1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/manali-venue.html"></a></div>
+                                <span class="city-name">Manali</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/mangalore2.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/mangalore-venue.html"></a></div>
+                                <span class="city-name">Mangalore</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/rishikesh2.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/rishikesh-venue.html"></a></div>
+                                <span class="city-name">Rishikesh</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/vijaywada3.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/vijaywada-venue.html"></a></div>
+                                <span class="city-name">Vijaywada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-box">
+                        <div class="row-box1">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/amritsar1.jpg" alt="Snow" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/amritsar-venue.html"></a></div>
+                                <span class="city-name">Amritsar</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/allahabad1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/allahabad-venue.html"></a></div>
+                                <span class="city-name">Allahabad</span>
+                            </div>
+                        </div>
+                        <div class="row-box2">
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/chandigarh1.jpg" alt="Mountains" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/chandigarh-venue.html"></a></div>
+                                <span class="city-name">Chandigarh</span>
+                            </div>
+                            <div class="column-box">
+                                <img class="city-images" src="img/cities/dehradun1.jpg" alt="Forest" />
+                                <div class="ovarlay"><a class="ovarlay" href="Venues/dehradun-venue.html"></a></div>
+                                <span class="city-name">Dehradun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br><br>
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-row-box">
+                        <div class="footer-col-box1">
+                            <img class="seminar-logo" src="img/Seminar2.png" alt="image" />
+                            <p>Seminar hall is a online booking system,it book a seminar hall and auditorium,it provide a best venue in your city.</p>
+                            <div class="social-icon">
+                                <a href="#"><img src="img/twitter.png" alt="image" /></a>
+                                <a href="#"><img src="img/facebook.png" alt="image" /></a>
+                                <a href="#"><img src="img/linkedin.png" alt="image" /></a>
+                                <a href="#"><img src="img/insta.png" alt="image" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-col-box2">
+                            <h4>EXPLORE</h4>
+                            <div class="footer-list-box1">
+                                <ul>
+                                    <li><a href="Venues/mumbai-venue.html">Mumbai</a></li>
+                                    <li><a href="Venues/delhi-venue.html">Delhi</a></li>
+                                    <li><a href="Venues/goa-venue.html">Goa</a></li>
+                                    <li><a href="Venues/kolkata-venue.html">Kolkata</a></li>
+                                    <li><a href="Venues/banglore-venue.html">Banglore</a></li>
+                                    <li><a href="Venues/chennai-venue.html">Chennai</a></li>
+                                    <li><a href="Venues/hyderabad-venue.html">Hyderabad</a></li>
+                                    <li><a href="city.html">All Cities</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-col-box3">
+                            <h4>QUICK LINKS</h4>
+                            <div class="footer-list-box2">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="city.html">Venues</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+                                    <li><a href="contact-us.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end">
+                    <p>copyright &copy; 2021. All rights Reserve</p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            function toggleBtn() {
+                let navbar = document.querySelector(".menu");
+                let content = document.querySelector(".city-gallary");
+                if (navbar.style.maxHeight === "270px") {
+                    navbar.style.maxHeight = "0px";
+                    content.style.marginTop = "0px";
+                    content.style.transition = "all .3s ease-out";
+                } else {
+                    navbar.style.maxHeight = "270px";
+                    content.style.marginTop = "200px";
+                    content.style.transition = "all .3s ease-out";
+                }
+                // if (content.style.marginTop === "200px") {
+                //     content.style.marginTop = "0px";
+                //     content.style.transition = "all .3s ease-out";
+                // } else {
+                //     content.style.marginTop = "200px";
+                //     content.style.transition = "all .3s ease-out";
+                // }
+                // content.style.marginTop = "200px";
+            }
+        </script>
+    </body>
+</html>

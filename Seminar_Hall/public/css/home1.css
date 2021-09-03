@@ -1,0 +1,703 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    background-color: #ffffff;
+    height: auto;  
+    position: relative;
+}
+.navbar {
+    background-color: rgb(39, 196, 123);
+    width: 100%;
+    position: fixed;
+    z-index: 3;            
+}
+.logo-image {
+    height: 40px;
+    margin: 8px 13px;          
+    float: left;
+    display: block;
+}
+.nav-list {  
+    list-style: none;
+    overflow: hidden;                     
+}
+.nav-list li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 15px;
+}
+.nav-list li a:hover {
+    color: #ffffff;
+}
+.navbar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    margin: 0 0px 0 0;
+}
+.navbar .menu-icon {
+    margin: 28px 22px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.navbar .menu-icon .nav-icon {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+.navbar .menu-icon .nav-icon::before {
+    content: "";
+    background: #ffffff;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+.navbar .menu-icon .nav-icon::after {
+    content: "";
+    background: #ffffff;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+.menu-btn {
+    display: none;
+}
+.navbar .menu-btn:checked ~ .nav-list {
+    max-height: 285px;
+}
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(45deg);
+    top:0;
+}
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(-45deg);
+    top:0;
+}
+.first-section {
+    height: auto;
+    width: 100%;
+}
+.back-image {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/seminar-home.jpg");
+    height: 440px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first-heading {
+    padding: 10px;
+    color: white;
+    font-size: 3.5rem;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+.first-para {
+    color: white;
+    font-style: italic;
+    padding: 8px;
+    flex-wrap: wrap;
+}
+.btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+    padding: 4px;
+    flex-wrap: wrap;
+}
+.btn1 {
+    padding: 7px 20px 6px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    margin: 15px;
+    flex-wrap: wrap;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-div {
+    background-color: rgba(0, 0, 0, 0.178);
+    height: 50px;
+}
+.btn2 {
+    padding: 7px 23px 6px 23px;
+    background-color: rgba(8, 219, 247, 0.993);
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-wrap: wrap;
+}
+.search-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+.input-box {
+    line-height: 30px;
+    width: 425px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    padding: 0 0 0 11px;
+    outline: none;
+    flex-wrap: wrap;
+}
+.btn3 {
+    padding: 7px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    flex-wrap: wrap;
+}
+.second-section-image {
+    display: table;
+    width: 90%;
+    margin: auto;
+}
+.popular-name-box {
+    display: block;
+}
+.mid-name h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    color: rgb(19, 18, 18)
+}
+.mid-name h4 {
+    color: #aaaaaa;
+    font: 200 1.15em/1.8em "Open Sans", sans-serif;
+    margin: 0 0 1.5em;
+    font-style: italic;
+}
+.popular-name-box h4::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    display: inline-block;
+    background: #a7cc38;
+    margin: 0 0 0 12px;
+}
+.image-gallary-box {
+    display: flex;
+    width: 100%;
+    float: right;
+    flex-direction: column;
+    margin: auto
+}
+.image-box1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+    margin: auto;
+}
+.popular-city-name {
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 0 0 14px;
+}
+.mumbai-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/popular-mumbai1.jpg");
+    height: 270px;
+    width: 50%;
+    background-size: 100% 100%;
+    margin-right: 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-position: center;
+}
+.mumbai-popular-link:hover {
+    background-size: 110% 110%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    background-position: center;
+}
+.goa-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/popular-goa1.jpg");
+    height: 270px;
+    width: 50%;
+    background-size: 100% 100%;
+    margin-left: 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-position: center;
+}
+.goa-popular-link:hover {
+    background-size: 111% 111%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    /* transition: all 300ms linear 0s; */
+    background-position: center;
+}
+.image-box2 {
+    margin-top: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.delhi-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/popular-delhi1.jpg");
+    height: 270px;
+    width: 33%;
+    margin-right: 8px;
+    border-radius: 15px;
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    background-position: center;
+}
+.delhi-popular-link:hover {
+    background-size: 110% 110%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    background-position: center;
+}
+.banglore-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/popular-banglore1.jpg");
+    height: 270px;
+    width: 33%;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 15px;
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    background-position: center;
+}
+.banglore-popular-link:hover {
+    background-size: 110% 110%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    background-position: center;
+}
+.kolkata-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/kolkata-howrah-bridge.jpg");
+    height: 270px;
+    width: 33%;
+    margin-left: 8px;
+    border-radius: 15px;
+    background-size: 100% 100% ;
+    text-decoration: none;
+    background-position: center;
+}
+.kolkata-popular-link:hover {
+    background-size: 110% 110%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    background-position: center;
+}
+.image-box3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+}
+.chennai-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/popular-chennai1.jpg");
+    height: 270px;
+    width: 50%;
+    background-size: 100% 100%;
+    margin-right: 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-position: center;
+}
+.chennai-popular-link:hover {
+    background-size: 110% 110%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    background-position: center;
+}
+.hyderabad-popular-link {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/popular-city/popular-hyderabad1.jpg");
+    height: 270px;
+    width: 50%;
+    background-size: 100% 100%;
+    margin-left: 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-position: center;
+}
+.hyderabad-popular-link:hover {
+    background-size: 110% 110%;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    background-position: center;
+}
+.footer-box {
+    background-color: rgb(58, 56, 56);
+    height: 270px;
+}
+.footer-row-box {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    margin: 0 10px 0 10px;
+    padding: 10px 0 0 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-col-box1 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(139, 137, 137);
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    line-height: 18px; 
+    margin-left: 20px;
+}
+.seminar-logo {
+    height: 35px;
+    margin: 35px 0 31px -16px;
+}
+.footer-col-box1 p {
+    width: 288px;
+}
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin: 19px 0 0 -19px;
+    width: 57%;
+}
+.social-icon img {
+    height: 17px;
+}
+.social-icon a {
+    height: 17px; 
+    margin-top: 8px;
+    margin: 11px 5px 0 5px;
+    border-radius: 10px;
+}
+.footer-col-box2 {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-col-box2 h4 {
+    color: white;
+    font-size: 17px; 
+    margin: 3.5px 0 0 0;
+    position: relative; 
+}
+.footer-col-box2 h4::after {
+    content: "";
+    width: 40px; 
+    height: 2px;
+    background: #e2203a;
+    display: block;
+    margin: 10px 0px 0px 0px
+}
+.footer-list-box1 {
+    width: 81px;
+    margin: 11px 0px 0 0px;
+}
+.footer-list-box1 li {
+    list-style: none;
+}
+.footer-list-box1 li a {
+    text-decoration: none;
+    color: #b6b0b0;
+    font-size: 13.6px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+.footer-list-box1 li a:hover {
+    margin-left: 5px;
+    color: red;
+}
+.footer-col-box3 {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-col-box3 h4 {
+    color: white; 
+    font-size: 17px;  
+    margin: 3.5px 0 0 0;
+    position: relative;
+}
+.footer-col-box3 h4::after {
+    content: "";
+    width: 40px;  
+    height: 2px;
+    background: #e2203a;
+    display: block;
+    margin: 10px 0px 0px 1px
+}
+.footer-list-box2 {
+    width: 81px;
+    margin: 11px 0 0 -26px;
+}
+.footer-list-box2 li {
+    list-style: none;
+}
+.footer-list-box2 li a {
+    text-decoration: none;
+    color: #b6b0b0;
+    font-size: 13.6px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+.footer-list-box2 li a:hover{
+    margin-left: 5px;
+    color: red;
+}
+.footer-end {
+    background-color: rgb(14, 13, 13);
+    height: 50px;
+    color: #6d6a6a;
+    display: grid;
+    place-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13.6px;
+}
+
+
+
+/*----- Navbar Responsive -----*/
+@media (min-width: 769px) {
+    .navbar li {
+        float: left; 
+    }
+    .navbar li a {
+        margin: 22px 14px 20px 14px;   
+    }
+    .navbar .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-right: 14px;
+    }
+    .navbar .menu-icon {
+        display: none;
+    }
+}
+@media (min-width: 769px) and (max-width: 910px) {
+    .logo-image {
+        height: 34px;
+        margin: 12px 13px;
+    } 
+    .nav-list li a {
+        font-size: 0.85rem;
+        margin: 23px 14px 20px 14px;
+    }
+}
+@media (max-width: 768px) { 
+    .logo-image {
+        height: 36px;
+        margin: 11px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.83rem;
+    }
+}
+@media (max-width:400px) {
+    .logo-image {
+        height: 32px;
+        margin: 13px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.78rem;
+    }
+}
+@media (max-width:320px) {
+    .logo-image {
+        height: 28px;
+        margin: 15px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.73rem;
+    }
+}
+@media (max-width:280px) {
+    .logo-image {
+        height: 24px;
+        margin: 17px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.65rem;
+    }
+}
+@media (max-width:240px) {
+    .logo-image {
+        height: 18px;
+        margin: 20px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.56rem;
+    }
+}
+/*---- Navbar End ----*/
+
+/*----- Section Responsive -----*/
+@media (max-width: 768px) {
+    .input-box {
+        width: 267px
+    }
+    .image-box1, .image-box2, .image-box3 {
+        flex-direction: column;
+        margin-top: 0px;
+        width: 100%;
+    }
+    .mumbai-popular-link {
+        height: 270px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .goa-popular-link {
+        height: 270px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .delhi-popular-link {
+        height: 270px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .banglore-popular-link {
+        height: 270px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .kolkata-popular-link {
+        height: 270px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .chennai-popular-link {
+        height: 270px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .hyderabad-popular-link {
+        height: 270px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    
+}
+/*------- Section End -------*/
+
+/*------- Footer-Responsive -------*/
+@media (max-width: 768px) {
+    .footer-box {
+        height: 760px;
+    }
+    .footer-row-box {
+        flex-direction: column;
+        height: 730px;
+        align-items: center;
+    }
+    .footer-col-box1 {
+        width: 95%;
+        margin: -15px 0 0 0;
+        text-align: center;
+    }
+    .seminar-logo {
+        margin: 33px 0 31px -7px;
+    }
+    .social-icon {
+        margin: 19px 0 0 0px;
+    }
+    .footer-col-box1::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #395849;
+        display: block;
+        margin-top: 33px;
+    }
+    .footer-col-box2 {
+        width: 95%;
+        margin: 30px 0 0 0;text-align: center;
+    }
+    .footer-col-box2::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #395849;
+        display: block;
+        margin-top: 22px;
+    }
+    .footer-col-box2 h4::after {
+        margin: 12px 0 0 0px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-list-box1 {
+        margin: 11px 0 0 0px;
+    }
+    .footer-col-box3 {
+        width: 95%;
+        margin: 28px 0 0 0;text-align: center;
+    }
+    .footer-col-box3 h4::after {
+        margin: 12px 0 0 0px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-list-box2 {
+        margin: 11px 0 0 0px;
+    }
+}
+@media (max-width: 302px) {
+    .footer-col-box1 p {
+        width: 110%;
+        font-size: 14px;
+    }
+    .footer-box {
+        height: 770px;
+    }
+}
+@media (max-width: 235px) {
+    .seminar-logo {
+        height: 25px;
+        margin: 35px 0 31px -7px;
+    }
+}
+/*------- Footer End -------*/

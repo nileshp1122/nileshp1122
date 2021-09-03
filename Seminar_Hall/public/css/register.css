@@ -1,0 +1,597 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: rgb(110, 107, 107);
+}
+.main {
+    background-color: #ffffff;
+    height: auto;  
+    position: relative;
+}
+.navbar {
+    background-color: rgb(39, 196, 123);
+    width: 100%;
+    position: fixed;
+    z-index: 3;            
+}
+.logo-image {
+    height: 40px;
+    margin: 8px 13px;          
+    float: left;
+    display: block;
+}
+.nav-list {  
+    list-style: none;
+    overflow: hidden;                     
+}
+.nav-list li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 15px;
+}
+.nav-list li a:hover {
+    color: #ffffff;
+}
+.navbar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    margin: 0 0px 0 0;
+}
+.navbar .menu-icon {
+    margin: 28px 22px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.navbar .menu-icon .nav-icon {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+.navbar .menu-icon .nav-icon::before {
+    content: "";
+    background: #ffffff;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+.navbar .menu-icon .nav-icon::after {
+    content: "";
+    background: #ffffff;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+.menu-btn {
+    display: none;
+}
+.navbar .menu-btn:checked ~ .nav-list {
+    max-height: 285px;
+}
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(45deg);
+    top:0;
+}
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(-45deg);
+    top:0;
+}
+.signup-section {
+    /* border: 3px dashed green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../img/signup-login-background.png");
+    background-size: 100% 100%;
+    padding: 0 2% 0 2%;
+}
+.signup-box {
+    display: flex;
+    height: 460px;
+    width: 900px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    border-radius: 25px;
+    /* border: 2px solid red; */
+}
+.jump-login-form {
+    /* border: 1px dashed rgb(6, 64, 255); */
+    background-color: #45F18E;
+    min-width: 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px 0 0 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.3px;
+}
+.jump-login-form img {
+    width: 100%;
+    padding: 0 0 80px 0;
+    margin-top: -119px;
+}
+.jump-login-form  h1 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.4em;
+    /* border: 1px solid red; */
+}
+.jump-login-form  h1::after {
+    content: "";
+    width: 71px;
+    height: 4px;
+    display: block;
+    background: #ffffff;
+    margin: 12px 0px 0px 89px;
+}
+.jump-login-form  p {
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: rgb(236, 236, 236);
+    width: 90%;
+}
+.btn1 {
+    height: 44px;
+    width: 50%;
+    background-color: #45F18E;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 23px 0 0 0;
+    font-weight: bold;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
+.btn1:hover {
+    background-color: black;
+    border: none;
+}
+.signup-form {
+    /* border: 2px solid rgb(255, 0, 212); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    min-width: 62%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0 25px 25px 0;
+}
+.signup-form h1 {
+    color: #45F18E;
+    font-weight: bold;
+    font-size: 2.4em;
+    margin-top: 12px;
+    /* border: 1px solid red; */
+}
+.signup-form h1::after {
+    content: "";
+    width: 71px;
+    height: 4px;
+    display: block;
+    background: #45F18E;
+    margin: 8px 0px 0px 99px;
+}
+.social-image-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+.social-image-box img {
+    height: 26px;
+    width: 26px;
+    margin: 0 5px;
+}
+.signup-form p {
+    color: rgb(116, 114, 114);
+    margin: 15px 0 4px 0;
+}
+.input-field1 {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    margin: 12px 0 0 0;  
+    gap: 4px; 
+    min-width: 380px; 
+    margin-left: 100px;
+    /* border: 1px solid blue; */
+}
+.input-field {
+    margin: 0px 0 0 0;
+    max-width: 280px;
+    width: 100%;
+    height: 36px;  
+    border-radius: 6px;
+    border: 1px solid #c9c9c9;
+    display: grid;
+    grid-template-columns: 8% 92%; 
+}
+.input-field img {
+    height: 16px;
+    width: 16px;
+    margin: 10px 0 0 10px;
+}
+.field, .field1{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 100;
+    padding: 0 0 0 15px;
+}
+.field:focus {
+    border: 1px solid #93ace2;
+    width: 94%;
+    margin-left: -23px;
+    border-radius: 6px;
+    padding-left: 37px;
+}
+.check-accept {
+    margin: 14px 0 0 0;
+}
+.btn2 {
+    height: 44px;
+    width: 28%;
+    background-color: #45F18E;
+    border: none;
+    border-radius: 20px;
+    margin: 18px 0 0 0;
+    font-weight: bold;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
+.btn2:hover {
+    background-color: #b706bd;
+    border: none;
+}
+/*------Footer------*/
+
+.footer-box {
+    background-color: rgb(58, 56, 56);
+    height: 270px;
+}
+.footer-row-box {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    margin: 0 10px 0 10px;
+    padding: 10px 0 0 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-col-box1 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(139, 137, 137);
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    line-height: 18px; 
+    margin-left: 20px;
+}
+.seminar-logo {
+    height: 35px;
+    margin: 35px 0 31px -16px;
+}
+.footer-col-box1 p {
+    width: 288px;
+}
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin: 19px 0 0 -19px;
+    width: 57%;
+}
+.social-icon img {
+    height: 17px;
+}
+.social-icon a {
+    height: 17px; 
+    margin-top: 8px;
+    margin: 11px 5px 0 5px;
+    border-radius: 10px;
+}
+.footer-col-box2 {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-col-box2 h4 {
+    color: white;
+    font-size: 17px; 
+    margin: 3.5px 0 0 0;
+    position: relative; 
+}
+.footer-col-box2 h4::after {
+    content: "";
+    width: 40px; 
+    height: 2px;
+    background: #e2203a;
+    display: block;
+    margin: 10px 0px 0px 0px
+}
+.footer-list-box1 {
+    width: 81px;
+    margin: 11px 0px 0 0px;
+}
+.footer-list-box1 li {
+    list-style: none;
+}
+.footer-list-box1 li a {
+    text-decoration: none;
+    color: #b6b0b0;
+    font-size: 13.6px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+.footer-list-box1 li a:hover {
+    margin-left: 5px;
+    color: red;
+}
+.footer-col-box3 {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-col-box3 h4 {
+    color: white; 
+    font-size: 17px;  
+    margin: 3.5px 0 0 0;
+    position: relative;
+}
+.footer-col-box3 h4::after {
+    content: "";
+    width: 40px;  
+    height: 2px;
+    background: #e2203a;
+    display: block;
+    margin: 10px 0px 0px 1px
+}
+.footer-list-box2 {
+    width: 81px;
+    margin: 11px 0 0 -26px;
+}
+.footer-list-box2 li {
+    list-style: none;
+}
+.footer-list-box2 li a {
+    text-decoration: none;
+    color: #b6b0b0;
+    font-size: 13.6px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+}
+.footer-list-box2 li a:hover{
+    margin-left: 5px;
+    color: red;
+}
+.footer-end {
+    background-color: rgb(14, 13, 13);
+    height: 50px;
+    color: #6d6a6a;
+    display: grid;
+    place-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13.6px;
+}
+
+
+/*-----Navbar Responsive-----*/
+@media (min-width: 769px) {
+    .navbar li {
+        float: left; 
+    }
+    .navbar li a {
+        margin: 22px 14px 20px 14px;   
+    }
+    .navbar .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-right: 14px;
+    }
+    .navbar .menu-icon {
+        display: none;
+    }
+}
+@media (min-width: 769px) and (max-width: 910px) {
+    .logo-image {
+        height: 34px;
+        margin: 12px 13px;
+    } 
+    .nav-list li a {
+        font-size: 0.85rem;
+        margin: 23px 14px 20px 14px;
+    }
+}
+@media (max-width: 768px) { 
+    .logo-image {
+        height: 36px;
+        margin: 11px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.83rem;
+    }
+}
+@media (max-width:400px) {
+    .logo-image {
+        height: 32px;
+        margin: 13px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.78rem;
+    }
+}
+@media (max-width:320px) {
+    .logo-image {
+        height: 28px;
+        margin: 15px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.73rem;
+    }
+}
+@media (max-width:280px) {
+    .logo-image {
+        height: 24px;
+        margin: 17px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.65rem;
+    }
+}
+@media (max-width:240px) {
+    .logo-image {
+        height: 18px;
+        margin: 20px 13px;
+    }
+    .navbar .nav-list li a {
+        font-size: 0.56rem;
+    }
+}
+/*----Navbar End----*/
+
+
+/*------- Content-Responsive -------*/
+@media (max-width: 768px) {
+    .signup-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+    }
+    .jump-login-form {
+        width: 100%;
+        flex-direction: column;;
+        border-radius: 25px 25px 0 0px;
+        padding-bottom: 25px;
+    }
+    .signup-form {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0 0 25px 25px;
+        padding-bottom: 25px;
+    }
+    .signup-section {
+        height: 880px;
+    }
+    .jump-login-form img {
+        padding: 0 0 35px 0;
+        margin-top: 19px;
+    }
+    .input-field1 {
+        flex-direction: column;
+        margin: 12px 0 0 0;
+        gap: 4px;
+        min-width: 380px;
+        /* border: 1px solid blue; */
+    }
+}
+/*----Content End----*/
+
+/*------- Footer-Responsive -------*/
+@media (max-width: 768px) {
+    .footer-box {
+        height: 760px;
+    }
+    .footer-row-box {
+        flex-direction: column;
+        height: 730px;
+        align-items: center;
+    }
+    .footer-col-box1 {
+        width: 95%;
+        margin: -15px 0 0 0;
+        text-align: center;
+    }
+    .seminar-logo {
+        margin: 33px 0 31px -7px;
+    }
+    .social-icon {
+        margin: 19px 0 0 0px;
+    }
+    .footer-col-box1::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #395849;
+        display: block;
+        margin-top: 33px;
+    }
+    .footer-col-box2 {
+        width: 95%;
+        margin: 30px 0 0 0;text-align: center;
+    }
+    .footer-col-box2::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #395849;
+        display: block;
+        margin-top: 22px;
+    }
+    .footer-col-box2 h4::after {
+        margin: 12px 0 0 0px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-list-box1 {
+        margin: 11px 0 0 0px;
+    }
+    .footer-col-box3 {
+        width: 95%;
+        margin: 28px 0 0 0;text-align: center;
+    }
+    .footer-col-box3 h4::after {
+        margin: 12px 0 0 0px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-list-box2 {
+        margin: 11px 0 0 0px;
+    }
+}
+@media (max-width: 302px) {
+    .footer-col-box1 p {
+        width: 110%;
+        font-size: 14px;
+    }
+    .footer-box {
+        height: 770px;
+    }
+}
+@media (max-width: 235px) {
+    .seminar-logo {
+        height: 25px;
+        margin: 35px 0 31px -7px;
+    }
+}
+/*------- Footer End -------*/
